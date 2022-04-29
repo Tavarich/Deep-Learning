@@ -19,7 +19,7 @@ def predit_img(model, image):
     return match_dict[pred]
 
 if __name__ == '__main__':
-    image_path = "classify-birds/val_set/001.Black_footed_Albatross_283.jpg"
+    image_path = "classify-birds/train_set/001.Black_footed_Albatross_283.jpg"
     image = Image.open(image_path)
     
     model = resnet34_cbam()
