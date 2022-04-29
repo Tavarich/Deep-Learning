@@ -216,5 +216,6 @@ def resnet34_cbam(pretrained=False, **kwargs):
 
 
 if __name__ == "__main__":
+    
     model = resnet34_cbam(True)
     print(model)
