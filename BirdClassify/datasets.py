@@ -112,3 +112,4 @@ if __name__ == "__main__":
     test_list = get_image_list(test_path)
     print(train_list[:5])
     print(test_list[:5])
+    
