@@ -38,6 +38,7 @@ def predict(models, test_list, image_folder, pred_path, map):
 
 
 if __name__ == "__main__":
+    
     test_path = "classify-birds/test_set"
     test_list = get_image_list(test_path)
     pred_path = ""
