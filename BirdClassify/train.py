@@ -111,7 +111,6 @@ if __name__ == "__main__":
         train(models, tk, vk, k=5)
     else:
         assert os.path.exists('checkpoint')
-
         checkpoint = torch.load('checkpoint')
 
         for i in range(len(models)):
