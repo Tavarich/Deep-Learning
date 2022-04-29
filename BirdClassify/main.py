@@ -23,7 +23,6 @@ if __name__ == '__main__':
     image = Image.open(image_path)
     
     model = resnet34_cbam()
-    
     checkpoint = torch.load('checkpoint')
     
     model.load_state_dict(checkpoint['model'][0])
