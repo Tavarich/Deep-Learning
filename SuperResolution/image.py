@@ -22,6 +22,7 @@ print(img1_ts.shape)
 print(type(img1_pil))
 
 if __name__ == "__main__":
+    
     plt.subplot(1, 3, 1)
     plt.title('pil numpy array')
     plt.imshow(img1_np)
