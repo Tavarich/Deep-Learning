@@ -50,6 +50,7 @@ main.py       对单图进行超分辨率重构
 
 # 重构效果
 SRResNet训练100个epoch左右，在DIV2k验证集上可以达到31.4db。
+
 SRGAN训练100个epoch左右，在DIV2K验证集上可以达到28db，而且有更真实的细节表现。
 
 双立方插值，SRResNet，SRGAN图片对比如下
