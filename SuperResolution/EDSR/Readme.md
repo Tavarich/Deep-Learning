@@ -21,4 +21,11 @@ EDSR是对SRResNet的优化改进，可以看到残差层中去掉了BatchNorm�
 4. 需要gpu环境
 
 # 效果
-训练100个epoch后，在div2k验证集上，峰值信噪比可以达到31db。
+训练40个epoch后，在div2k验证集上，峰值信噪比可以达到30.4db。
+
+在crop_size = 120 的条件下训练速度有点慢，后续考虑缩小crop_size重新训练。
+
+双立方插值与EDSR图片对比(左为双立方插值)
+
+![bicubic](https://user-images.githubusercontent.com/61419255/166957834-39c97c82-16ac-41c7-a27b-96b1df9b90e0.jpg)    ![edsr](https://user-images.githubusercontent.com/61419255/166957852-e2160edc-b273-4ced-a0dc-a0853663df3d.jpg)
+
