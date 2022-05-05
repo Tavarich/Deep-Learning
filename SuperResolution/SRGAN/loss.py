@@ -4,6 +4,7 @@ from torchvision.models import vgg19
 
 
 class ContentLoss(nn.Module):
+    # 内容损失
     def __init__(self, device):
         super().__init__()
         self.mse = nn.MSELoss()
@@ -18,6 +19,7 @@ class ContentLoss(nn.Module):
 
 
 class AdversarialLoss(nn.Module):
+    # 对抗损失
     def __init__(self):
         super().__init__()
 
@@ -27,6 +29,7 @@ class AdversarialLoss(nn.Module):
 
 
 class PerceptualLoss(nn.Module):
+    # 感知损失，包括内容损失和对抗损失
     def __init__(self, device):
         super().__init__()
         self.vgg_loss = ContentLoss(device)
