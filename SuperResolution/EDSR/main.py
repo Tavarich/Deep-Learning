@@ -22,17 +22,17 @@ def predict(model, img, scaling_size=2, mode='gpu'):
     sr_tensor = torch.clamp(sr_tensor, 0, 1)  # 裁剪超出0——1范围的像素值
     sr_img = transforms.ToPILImage()(sr_tensor)
 
-    sr_img.save('/root/CV/SuperResolution/project/result/edsr.jpg')
+    sr_img.save('/root/CV/SuperResolution/project/result/edsr.jpg')  # 超分重构图片保存地址 （修改可选）
 
     bi_img = img.resize((int(img.width * scaling_size), int(img.height * scaling_size)), Image.BICUBIC)
-    bi_img.save('/root/CV/SuperResolution/project/result/bicubic.jpg')
+    bi_img.save('/root/CV/SuperResolution/project/result/bicubic.jpg')  # 双立方插值图片保存地址 （修改可选）
 
 
 def main():
-    img_path = "/root/autodl-tmp/DIV2K/test/low.jpg"
+    img_path = "/root/autodl-tmp/DIV2K/test/low.jpg"    # 低分辨率图像地址 （路径需要自己修改）
     img = Image.open(img_path)
 
-    save_path = "/root/autodl-tmp/Models/SuperResolution/edsr_v2"
+    save_path = "/root/autodl-tmp/Models/SuperResolution/edsr_v2"  # 模型权重保存地址 （路径需要自己修改）
     checkpoint = torch.load(save_path, map_location='cpu')
 
     model = EDSR()
