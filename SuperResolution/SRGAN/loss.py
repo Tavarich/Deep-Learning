@@ -40,8 +40,21 @@ class PerceptualLoss(nn.Module):
         adversarial_loss = self.adversarial_loss(x)
 
         return vgg_loss + 1e-3 * adversarial_loss
-    
+   
+class GeneratorLoss(nn.Module):
+    # 生成损失
+    def __init__(self, device):
+        super().__init__()
+        self.mse_loss = nn.MSELoss()
+        self.perceptual_loss = PerceptualLoss(device)
+   
+    def forward(self, fake, real, x):
+        mse_loss = self.mse_loss(fake, real)
+        perceptual_loss = self.perceptual_loss(fake, real, x)
+        return mse_loss + perceptual_loss
 
+    
+    
 if __name__ == "__main__":
     print(nn.Sequential(*list(vgg19().features)[:34]))
     
