@@ -53,10 +53,10 @@ SRResNet训练100个epoch左右，在DIV2k验证集上可以达到31.4db。
 
 SRGAN训练100个epoch左右，在DIV2K验证集上可以达到28db，而且有更真实的细节表现。
 
-双立方插值，SRResNet，SRGAN图片对比如下
+双立方插值，SRResNet，SRGAN图片对比自左至右如下
 
 
-![bicubic](https://user-images.githubusercontent.com/61419255/166958345-47bc7bfe-451e-428d-8a4f-8a0b051bcaf6.jpg)    ![srresnet](https://user-images.githubusercontent.com/61419255/166958359-549f7a38-acfa-4818-bdc1-6f2050e47fa8.jpg)    ![srgan](https://user-images.githubusercontent.com/61419255/166958366-c340648e-c905-4d43-b124-85b2d25ad4da.jpg)
+<img src="https://user-images.githubusercontent.com/61419255/166958345-47bc7bfe-451e-428d-8a4f-8a0b051bcaf6.jpg" width="250px">    <img src="https://user-images.githubusercontent.com/61419255/166958359-549f7a38-acfa-4818-bdc1-6f2050e47fa8.jpg" width="250px">    <img src="https://user-images.githubusercontent.com/61419255/166958366-c340648e-c905-4d43-b124-85b2d25ad4da.jpg" width="250px">
 
-
+<img src="https://user-images.githubusercontent.com/61419255/167055999-c4cdeed4-6c2c-4f67-8e6e-aa8d93046475.jpg" width="250px">    <img src="https://user-images.githubusercontent.com/61419255/167056014-14f45090-8852-4fc0-b4e9-25fdab2d6425.jpg" width="250px">    <img src="https://user-images.githubusercontent.com/61419255/167056022-e81e414b-318b-4a8b-881b-297e0c9d8102.jpg" width="250px">
 
