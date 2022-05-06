@@ -33,12 +33,12 @@ schedulerD = optim.lr_scheduler.StepLR(optimizerD, step_size=10, gamma=0.9)
 netG.to(device)
 netD.to(device)
 
-checkpointGan = '/root/autodl-tmp/Models/SuperResolution/srgan'
+checkpointGan = '/root/autodl-tmp/Models/SuperResolution/srgan'  # 模型权重保存位置，需要自行修改
 
-writer = SummaryWriter('/root/tf-logs/srgan')
+writer = SummaryWriter('/root/tf-logs/srgan')    # tensorboard 可视化， 需要自行修改位置
 
 # # G网加载已经训练过的参数
-# pretrained = '/root/autodl-tmp/Models/SuperResolution/srresnet'
+# pretrained = '/root/autodl-tmp/Models/SuperResolution/srresnet'   # 预训练的生成网络（SRResNet）权重保存地址，与pretrain文件中的位置对应
 # checkpointG = torch.load(pretrained)
 # netG.load_state_dict(checkpointG['model'])
 
@@ -151,8 +151,8 @@ def valid(netG, netD, valid_iter, epoch):
 
 if __name__ == "__main__":
 
-    train_path = '/root/autodl-tmp/DIV2K/DIV2K_train_HR_560'
-    valid_path = '/root/autodl-tmp/DIV2K/DIV2K_valid_HR'
+    train_path = '/root/autodl-tmp/DIV2K/DIV2K_train_HR_560'   # 训练集位置，需要自行修改
+    valid_path = '/root/autodl-tmp/DIV2K/DIV2K_valid_HR'       # 验证集位置，需要自行修改
     train_set = SrDataSet(train_path, crop_size, scaling_size)
     valid_set = SrDataSet(valid_path, crop_size, scaling_size)
 
