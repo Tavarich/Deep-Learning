@@ -19,13 +19,13 @@ num_epoch = 100
 lr = 5e-4
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-writer = SummaryWriter('/root/tf-logs/srresnet')  # tensorboard 可视化
+writer = SummaryWriter('/root/tf-logs/srresnet')  # tensorboard 可视化   需要自行修改地址
 
 model = Generator(scaling_size)
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.9)
-save_path = '/root/autodl-tmp/Models/SuperResolution/srresnet'
+save_path = '/root/autodl-tmp/Models/SuperResolution/srresnet'  # 模型权重保存位置，需要自行修改
 
 
 def valid(model, val_iter, epoch):
@@ -106,8 +106,8 @@ def train(model, train_set, valid_set, start=0, maxv=0):
 
 if __name__ == "__main__":
 
-    train_path = "/root/autodl-tmp/DIV2K/DIV2K_train_HR_560"
-    valid_path = "/root/autodl-tmp/DIV2K/DIV2K_valid_HR"
+    train_path = "/root/autodl-tmp/DIV2K/DIV2K_train_HR_560"  # 训练集文件地址，需要自行修改
+    valid_path = "/root/autodl-tmp/DIV2K/DIV2K_valid_HR"      # 验证集文件地址，需要自行修改
 
     train_set = SrDataSet(train_path, crop_size, scaling_size)
     valid_set = SrDataSet(valid_path, crop_size, scaling_size)
