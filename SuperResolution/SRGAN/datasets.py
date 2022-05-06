@@ -49,7 +49,7 @@ class SrDataSet(Dataset):
         return lr, hr
 
 
-train_path = '/root/autodl-tmp/DIV2K/DIV2K_train_HR_560'
+train_path = '/root/autodl-tmp/DIV2K/DIV2K_train_HR_560'       # 训练集地址 需要自行修改
 
 if __name__ == "__main__":
     train_set = SrDataSet(train_path, 448, 2)
